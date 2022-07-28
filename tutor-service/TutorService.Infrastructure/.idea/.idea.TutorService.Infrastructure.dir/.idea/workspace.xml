@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60150b8e-db33-4f05-9df4-5e0e620921f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../TutorService.Application/Contracts/Infrastructure/IMessagingService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TutorService.Application/Contracts/Infrastructure/IStorageService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TutorService.Infrastructure.dir/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TutorService.Infrastructure.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TutorService.Infrastructure.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TutorService.Infrastructure.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfrastructureServiceRegistration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Protos/storage-service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/MessagingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TutorService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TutorService.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TutorService.Application/TutorService.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../TutorService.Application/TutorService.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TutorService.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TutorService.Infrastructure.csproj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="232aqNGzQzlj058TQ1arzKhNN1W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60150b8e-db33-4f05-9df4-5e0e620921f2" name="Changes" comment="" />
+      <created>1640934825459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640934825459</updated>
+      <workItem from="1640934833212" duration="86000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\TutorService.Domain\TutorService.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Features\" />
+        <None Remove="Features\Tutore\" />
+        <None Remove="Features\Tutor\Queries\GetAuthorPagedList\" />
+        <None Remove="Microsoft.Extensions.DependencyInjection" />
+        <None Remove="Shared\" />
+        <None Remove="MassTransit" />
+        <None Remove="Shared\Requests\" />
+        <None Remove="Shared\Responses\" />
+        <None Remove="MediatR" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Features\" />
+        <Folder Include="Shared\" />
+        <Folder Include="Shared\Requests\" />
+        <Folder Include="Shared\Responses\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="FluentValidation" Version="10.3.6" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.41.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+        <PackageReference Include="MediatR" Version="9.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="Protos\files.proto" GrpcServices="Client">
+            <Generator>MSBuild:Compile</Generator>
+        </Protobuf>
+        <None Remove="Protos\courses.proto" />
+        <Protobuf Include="Protos\courses.proto" />
+        <None Remove="Protos\tutors.proto" />
+        <Protobuf Include="Protos\tutors.proto" />
+        <None Remove="Protos\constants.proto" />
+        <Protobuf Include="Protos\constants.proto" />
+        <None Remove="Protos\identities.proto" />
+        <Protobuf Include="Protos\identities.proto" />
+    </ItemGroup>
+</Project>

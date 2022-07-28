@@ -1,0 +1,63 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.cardLeftContainer,
+.thumbnail {
+  height: 350px;
+}
+
+.cardLeftContainer {
+  flex: 1.5;
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.7);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+  transition: ease-in-out all 0.2s;
+}
+
+.cardLeftContainer:hover .thumbnail {
+  filter: grayscale(0.2);
+}
+
+.actionsContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 12px;
+  top: 12px;
+
+  gap: 8px;
+}
+
+.cardRightContainer {
+  flex: 2;
+  display: flex;
+  padding: 24px 48px;
+  background-color: var(--gray-50);
+  flex-direction: column;
+}
+
+.cardInformationContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  margin-left: 44px;
+}

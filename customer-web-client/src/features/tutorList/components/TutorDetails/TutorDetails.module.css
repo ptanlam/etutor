@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 100vh;
+}
+
+.title {
+  font-weight: 900;
+}
+
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bookingButton {
+  width: 100%;
+  background: var(--gray-50);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}

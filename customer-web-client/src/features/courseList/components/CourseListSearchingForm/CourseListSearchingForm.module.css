@@ -1,0 +1,19 @@
+.container {
+  composes: container from '../../../../shared/styles/SearchingForm.module.css';
+}
+
+.form {
+  composes: form from '../../../../shared/styles/SearchingForm.module.css';
+}
+
+.input {
+  composes: input from '../../../../shared/styles/SearchingForm.module.css';
+}
+
+.select {
+  composes: select from '../../../../shared/styles/SearchingForm.module.css';
+}
+
+.action {
+  composes: action from '../../../../shared/styles/SearchingForm.module.css';
+}

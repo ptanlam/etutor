@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  overflow-y: scroll;
+  padding: 12px 24px;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  gap: 16px;
+
+  grid-auto-rows: minmax(min-content, max-content);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-50);
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cardThumbnailContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardThumbnail {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.actionContainer {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  justify-content: center;
+
+  align-items: center;
+  gap: 8px;
+}
+
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px;
+  gap: 4px;
+}

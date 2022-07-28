@@ -1,0 +1,26 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.degreeContainer {
+  background-color: var(--gray-50);
+  padding: 12px 24px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.closeBtn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}

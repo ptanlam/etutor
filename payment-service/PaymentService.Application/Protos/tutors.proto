@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "PaymentService.Application";
+
+service Tutors {
+  rpc GetTutorBasicInfo (GetTutorBasicInfoRequest) returns (GetTutorBasicInfoResponse);
+  rpc GetTutorActiveRental (GetTutorActiveRentalRequest) returns (GetTutorActiveRentalResponse);
+}
+
+message Image {
+  string id = 1;
+  string ownerId = 2;
+  string url = 3;
+  string filename = 4;
+  string mimetype = 5;
+}
+
+message GetTutorBasicInfoRequest {
+  string id = 1;
+}
+
+message GetTutorBasicInfoResponse {
+  string id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string fullName = 4;
+  string gender = 5;
+  string description = 6;
+  repeated Image images = 7;
+}
+
+message GetTutorActiveRentalRequest {
+  string tutorId = 1;
+}
+
+message GetTutorActiveRentalResponse {
+  int32 id = 1;
+  double amount = 2;
+  string unit = 3;
+}

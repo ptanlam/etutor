@@ -1,0 +1,72 @@
+.container,
+.leftContainer,
+.centerContainer,
+.rightContainer {
+  display: flex;
+}
+
+.container {
+  flex: 1;
+  gap: 80px;
+}
+
+.leftContainer,
+.centerContainer,
+.rightContainer {
+  flex-direction: column;
+}
+
+.leftContainer {
+  flex: 1;
+  gap: 32px;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionContainer div {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.centerContainer {
+  flex: 4;
+  position: relative;
+}
+
+.rightContainer {
+  flex: 2;
+  gap: 24px;
+}
+
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

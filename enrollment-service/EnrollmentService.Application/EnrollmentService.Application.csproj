@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\EnrollmentService.Domain\EnrollmentService.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Protos\courses.proto" />
+      <Protobuf Include="Protos\courses.proto" />
+      <None Remove="Protos\sessions.proto" />
+      <Protobuf Include="Protos\sessions.proto" />
+      <None Remove="Protos\enrollments.proto" />
+      <Protobuf Include="Protos\enrollments.proto" />
+    </ItemGroup>
+
+</Project>

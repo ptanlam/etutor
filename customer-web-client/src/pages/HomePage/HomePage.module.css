@@ -1,0 +1,10 @@
+.container {
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  margin-top: -36px;
+  display: flex;
+}

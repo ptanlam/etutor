@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.courseThumbnail {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}

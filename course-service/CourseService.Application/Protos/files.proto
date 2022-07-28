@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "CourseService.Application";
+
+package files;
+
+service Files {
+    rpc GetAllForOwner (GetAllForOwnerRequest) returns (GetAllForOwnerResponse);
+    rpc UploadForOwner (UploadFilesForOwnerRequest) returns (UploadFilesForOwnerResponse);
+}
+
+message GetAllForOwnerRequest {
+    string ownerId = 1;
+}
+
+message File {
+    string id = 1;
+    string ownerId = 2;
+    string url = 3;
+    string filename = 4;
+    string mimetype = 5;
+}
+
+message GetAllForOwnerResponse {
+    repeated File files = 2;
+}
+
+message UploadFileRequest {
+    string filename = 1;
+    bytes buffer = 2;
+    string mimetype = 3;
+}
+
+message UploadFilesForOwnerRequest {
+    string ownerId = 1;
+    repeated UploadFileRequest files = 2;
+}
+
+message UploadedFile {
+    string url = 1;
+    string filename = 2;
+    string mimetype = 3;
+}
+
+message UploadFilesForOwnerResponse {
+    repeated UploadedFile files = 1;
+}

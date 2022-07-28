@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CourseService.Domain\CourseService.Domain.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.42.0-pre1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Protos\files.proto" />
+		<Protobuf Include="Protos\files.proto" />
+		<None Remove="Protos\courses.proto" />
+		<Protobuf Include="Protos\courses.proto" GrpcService="" />
+		<None Remove="Protos\constants.proto" />
+		<Protobuf Include="Protos\constants.proto" />
+		<None Remove="Protos\sessions.proto" />
+		<Protobuf Include="Protos\sessions.proto" />
+		<None Remove="Protos\tutors.proto" />
+		<Protobuf Include="Protos\tutors.proto" />
+		<None Remove="Features\Courses\Queries\GetCourseBasicInfo\" />
+		<Folder Include="Features\Courses\Queries\GetCourseBasicInfo\" />
+		<None Remove="Protos\enrollments.proto" />
+		<Protobuf Include="Protos\enrollments.proto" />
+	</ItemGroup>
+</Project>

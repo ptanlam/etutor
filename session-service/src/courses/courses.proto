@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package courses;
+
+service Courses {
+	rpc GetCourseBasicInfo (GetCourseBasicInfoRequest) returns (GetCourseBasicInfoResponse);
+}
+
+message GetCourseBasicInfoRequest {
+	string id = 1;
+}
+
+message GetCourseBasicInfoResponse {
+	string id = 1;
+	string name = 2;
+	string subjectName = 3;
+	string educationalLevel = 4;
+	string educationalGrade = 5;
+}

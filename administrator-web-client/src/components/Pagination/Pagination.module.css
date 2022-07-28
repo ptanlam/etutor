@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  list-style: none;
+}
+
+.pageLink {
+  padding: 6px 12px;
+  background-color: #FEEBC8;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.activePageLink {
+  background-color: #DD6B20;
+  color: white
+}

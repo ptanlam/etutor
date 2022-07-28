@@ -1,0 +1,107 @@
+_format_version: "2.1"
+
+services:
+  - name: identity-service
+    url: http://host.docker.internal:3010/users
+    routes:
+      - name: users-route
+        paths:
+          - /api/users
+
+  - name: constant-service-genders
+    url: http://host.docker.internal:3011/genders
+    routes:
+      - name: genders-route
+        paths:
+          - /api/genders
+
+  - name: constant-service-academic-ranks
+    url: http://host.docker.internal:3011/academic-ranks
+    routes:
+      - name: constants-route
+        paths:
+          - /api/academic-ranks
+
+  - name: constant-service-educational-levels
+    url: http://host.docker.internal:3011/educational-levels
+    routes:
+      - name: educational-levels-route
+        paths:
+          - /api/educational-levels
+
+  - name: constant-service-currencies
+    url: http://host.docker.internal:3011/currencies
+    routes:
+      - name: currencies-route
+        paths:
+          - /api/currencies
+
+  - name: tutor-service
+    url: http://host.docker.internal:3012/tutors
+    routes:
+      - name: tutors-route
+        paths:
+          - /api/tutors
+
+  - name: course-service-courses
+    url: http://host.docker.internal:3013/courses
+    routes:
+      - name: courses-route
+        paths:
+          - /api/courses
+
+  - name: course-service-subjects
+    url: http://host.docker.internal:3013/subjects
+    routes:
+      - name: subjects-route
+        paths:
+          - /api/subjects
+
+  - name: feedback-service
+    url: http://host.docker.internal:3014/feedbacks
+    routes:
+      - name: feedbacks-route
+        paths:
+          - /api/feedbacks
+
+  - name: enrollment-service
+    url: http://host.docker.internal:3016/enrollments
+    routes:
+      - name: enrollments-route
+        paths:
+          - /api/enrollments
+
+  - name: session-service
+    url: http://host.docker.internal:3017/sessions
+    routes:
+      - name: sessions-route
+        paths:
+          - /api/sessions
+
+  - name: payment-service-methods
+    url: http://host.docker.internal:3018/methods
+    routes:
+      - name: payment-methods-route
+        paths:
+          - /api/payment-methods
+
+  - name: payment-service-orders
+    url: http://host.docker.internal:3018/orders
+    routes:
+      - name: orders-route
+        paths:
+          - /api/orders
+
+  - name: payment-service-transactions
+    url: http://host.docker.internal:3018/transactions
+    routes:
+      - name: transactions-route
+        paths:
+          - /api/transactions
+
+  - name: notification-service
+    url: http://host.docker.internal:3019/notifications
+    routes:
+      - name: notifications-route
+        paths:
+          - /api/notifications

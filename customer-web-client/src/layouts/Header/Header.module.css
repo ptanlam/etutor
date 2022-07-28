@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  letter-spacing: -2px;
+  font-size: 2.5rem;
+  color: rgba(24, 67, 107);
+  font-weight: 900;
+}
+
+.container {
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: var(--gray-50);
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigationText {
+  font-weight: 700;
+  text-decoration: none;
+  transition: ease-in-out color 0.2s;
+}

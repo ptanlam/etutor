@@ -1,0 +1,30 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.agreementContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agreementContent {
+  overflow-y: scroll;
+  background-color: var(--gray-100);
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.descriptionContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.descriptionContent {
+  flex: 1;
+}

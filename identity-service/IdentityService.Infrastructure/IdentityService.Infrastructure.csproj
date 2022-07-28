@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Auth0.ManagementApi" Version="7.12.1" />
+      <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="5.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="7.3.1" />
+      <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IdentityService.Application\IdentityService.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="IntegrationMessages\" />
+      <None Remove="IntegrationMessages\Commands\" />
+      <None Remove="IntegrationMessages\Consumers\" />
+      <None Remove="MassTransit.RabbitMQ" />
+      <None Remove="MassTransit.AspNetCore" />
+      <None Remove="Options\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="IntegrationMessages\" />
+      <Folder Include="IntegrationMessages\Commands\" />
+      <Folder Include="IntegrationMessages\Consumers\" />
+      <Folder Include="Options\" />
+    </ItemGroup>
+</Project>

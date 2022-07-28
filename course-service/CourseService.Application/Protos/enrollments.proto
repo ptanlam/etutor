@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "CourseService.Application";
+
+package enrollments;
+
+service Enrollments {
+	rpc CountEnrollmentsForCourse (CountEnrollmentsForCourseRequest) returns (CountEnrollmentsForCourseResponse);
+}
+
+message CountEnrollmentsForCourseRequest {
+	string courseId = 1;
+}
+
+message CountEnrollmentsForCourseResponse {
+	int32 numberOfEnrollments = 1;
+}

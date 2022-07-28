@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background-color: var(--gray-50);
+  border-radius: 12px;
+
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}

@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option csharp_namespace = "EnrollmentService.Application";
+
+import "google/protobuf/wrappers.proto";
+
+package courses;
+
+service Courses {
+	rpc GetTutorsByConditions (GetTutorsByConditionsRequest) returns (GetTutorsByConditionsResponse);
+	rpc GetCourseBasicInfo (GetCourseBasicInfoRequest) returns (GetCourseBasicInfoResponse);
+	rpc CreateOneOnOneCourse (CreateOneOnOneCourseRequest) returns (CreateOneOnOneCourseResponse);
+}
+
+message GetTutorsByConditionsRequest {
+	google.protobuf.StringValue subjectName = 1;
+	google.protobuf.StringValue educationalLevelId = 2;
+	google.protobuf.StringValue educationalGradeId = 3;
+}
+
+message GetTutorsByConditionsResponse {
+	repeated string tutorIdList = 1;
+}
+
+message GetCourseBasicInfoRequest {
+	string id = 1;
+}
+
+message GetCourseBasicInfoResponse {
+	string id = 1;
+	google.protobuf.StringValue name = 2;
+	string subjectName = 3;
+	string educationalLevel = 4;
+	google.protobuf.StringValue educationalGrade = 5;
+	int32 maxNumberOfStudents = 6;
+}
+
+message CreateOneOnOneCourseRequest {
+	string tutorId = 1;
+	string subjectId = 2;
+	string startDate = 3;
+	string endDate = 4;
+	string learningDays = 6;
+	double tuitionFeeAmount = 7;
+	string tuitionFeeUnit = 8;
+}
+
+message CreateOneOnOneCourseResponse {
+	string id = 1;
+}

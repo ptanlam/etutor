@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.15" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.14">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\EnrollmentService.Application\EnrollmentService.Application.csproj" />
+        <ProjectReference Include="..\EnrollmentService.Infrastructure\EnrollmentService.Infrastructure.csproj" />
+        <ProjectReference Include="..\EnrollmentService.Persistence\EnrollmentService.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "CourseService.Application";
+
+import "google/protobuf/wrappers.proto";
+
+package courses;
+
+service Courses {
+	rpc GetTutorsByConditions (GetTutorsByConditionsRequest) returns (GetTutorsByConditionsResponse);
+}
+
+message GetTutorsByConditionsRequest {
+	google.protobuf.StringValue subjectName = 1;
+	google.protobuf.StringValue educationalLevelId = 2;
+	google.protobuf.StringValue educationalGradeId = 3;
+}
+
+message GetTutorsByConditionsResponse {
+	repeated string tutorIdList = 1;
+}

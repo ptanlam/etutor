@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Auth0.ManagementApi" Version="7.12.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+      <PackageReference Include="Grpc.AspNetCore" Version="2.42.0" />
+      <PackageReference Include="LinqKit" Version="1.2.0" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IdentityService.Domain\IdentityService.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Protos\users.proto" />
+      <None Remove="Features\Roles\" />
+      <None Remove="Features\Roles\Commands\" />
+      <None Remove="Features\Roles\Commands\AssignRoleToUser\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Protos\identities.proto" />
+      <Protobuf Include="Protos\identities.proto" />
+      <None Remove="Protos\constants.proto" />
+      <Protobuf Include="Protos\constants.proto" />
+      <None Remove="Protos\files.proto" />
+      <Protobuf Include="Protos\files.proto" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\Roles\" />
+      <Folder Include="Features\Roles\Commands\" />
+      <Folder Include="Features\Roles\Commands\AssignRoleForUser\" />
+    </ItemGroup>
+</Project>

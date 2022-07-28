@@ -1,0 +1,111 @@
+.container {
+  flex: 1;
+}
+
+.cardContainer,
+.thumbnail {
+  border-radius: 8px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-50);
+  padding: 8px;
+  gap: 12px;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tuition {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  padding: 0 8px;
+  border-radius: 2px;
+
+  color: var(--gray-800);
+  background-color: var(--gray-50);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.tutorContainer {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tutorAvatar {
+  /* border: 1px solid var(--gray-500); */
+  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tutorName {
+  font-size: 0.9rem;
+  margin-left: -28px;
+  padding-left: 28px;
+  padding-right: 4px;
+  border-radius: 4px;
+
+  color: var(--gray-700);
+  font-weight: 500;
+  background-color: var(--gray-50);
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.05);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 24px;
+}
+
+.name,
+.description {
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.subjectName {
+  text-align: center;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.date {
+  color: var(--cyan-800);
+}
+
+.time {
+  color: var(--green-600);
+}
+
+.description {
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.learningDays {
+  text-align: end;
+}

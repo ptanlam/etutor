@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="EnrollmentAggregate\Enums\" />
+        <None Remove="Common\" />
+        <None Remove="ValueTyes\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="EnrollmentAggregate\Enums\" />
+        <Folder Include="Common\" />
+    </ItemGroup>
+</Project>

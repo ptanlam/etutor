@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package constants;
+
+service Constants {
+    rpc GetGenderById (GetConstantRequest) returns (GetConstantResponse);
+    rpc GetAcademicRankById (GetConstantRequest) returns (GetConstantResponse);
+    rpc GetEducationalLevelById (GetConstantRequest) returns (GetConstantResponse);
+    rpc GetEducationalGradeById (GetConstantRequest) returns (GetConstantResponse);
+}
+
+message GetConstantRequest {
+    google.protobuf.StringValue id = 1;
+}
+
+message GetConstantResponse {
+    string id = 1;
+    string name = 2;
+}

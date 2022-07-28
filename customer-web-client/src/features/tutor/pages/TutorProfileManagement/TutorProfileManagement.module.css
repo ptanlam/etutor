@@ -1,0 +1,31 @@
+.contentContainerWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.contentContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  overflow-y: scroll;
+  grid-auto-rows: minmax(min-content, max-content);
+
+  padding: 12px 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.contentContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package identities;
+
+service Identities {
+	rpc GetUserDetails (GetUserDetailsRequest) returns (GetUserDetailsResponse);
+	rpc GetUsersWithDetailsByConditions (GetUsersWithDetailsByConditionsRequest) returns 
+		(GetUsersWithDetailsByConditionsResponse);
+}
+
+message GetUserDetailsRequest {
+	string id = 1;
+}
+
+message GetUserDetailsResponse {
+	string id = 1;
+	string email = 2;
+	string firstName = 3;
+	string lastName = 4;
+	string fullName = 5;
+	string phoneNumber = 6;
+	string dateOfBirth = 7;
+	string gender = 8;
+    string avatarUrl = 9;
+}
+
+message GetUsersWithDetailsByConditionsRequest {
+	google.protobuf.StringValue name = 1;
+	google.protobuf.StringValue genderId = 2; 
+}
+
+message GetUsersWithDetailsByConditionsResponse {
+	repeated GetUserDetailsResponse users = 1;
+}

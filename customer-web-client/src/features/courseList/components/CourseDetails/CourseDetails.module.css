@@ -1,0 +1,62 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metadataContainer {
+  position: relative;
+}
+
+.banner {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+}
+
+.metadata {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  gap: 4px;
+}
+
+.metadata .courseName,
+.metadata .text {
+  padding: 0 32px;
+  color: var(--gray-100);
+}
+
+.courseName {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -4px;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content {
+  background-color: #f1f3f5;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 48px;
+}

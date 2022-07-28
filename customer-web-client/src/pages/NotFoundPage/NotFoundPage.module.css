@@ -1,0 +1,21 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.link {
+  composes: link from '../ErrorPage/ErrorPage.module.css';
+}

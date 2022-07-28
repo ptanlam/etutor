@@ -1,0 +1,32 @@
+.cardContainer {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+.cardAction {
+  display: flex;
+  gap: 4px;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 4px;
+}

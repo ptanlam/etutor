@@ -1,0 +1,18 @@
+.menuButtonContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 12px;
+
+  transition: ease-in-out background-color 0.2s;
+}
+
+.menuButtonContainer:hover {
+  background-color: var(--whiteAlpha-400);
+}
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+}

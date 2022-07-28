@@ -1,0 +1,53 @@
+variables:
+  STARTUP_PROJECT: TutorService.API
+  UNIT_TEST_PROJECT: TutorService.UnitTesting
+  DOCKER_IMAGE_TAG: $CI_REGISTRY/$CI_PROJECT_ROOT_NAMESPACE/$CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
+
+stages:
+  - build and publish
+  - testing
+  - build and push docker image
+  - update image tag in helm chart
+
+build-project:
+  stage: build and publish
+  image: mcr.microsoft.com/dotnet/sdk:5.0
+  script:
+    - dotnet build --configuration Release
+    - dotnet publish --configuration Release --output publish
+
+unit-testing:
+  stage: testing
+  image: mcr.microsoft.com/dotnet/sdk:5.0
+  script:
+    - dotnet test $UNIT_TEST_PROJECT
+
+build-and-push-image:
+  image: docker:stable
+  services:
+    - name: docker:20.10.15-dind
+  stage: build and push docker image
+  before_script:
+    - docker info
+    - echo $CI_BUILD_TOKEN | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  script:
+    - echo Build docker image
+    - docker build -t $DOCKER_IMAGE_TAG .
+    - echo Push docker image $DOCKER_IMAGE_TAG
+    - docker push $DOCKER_IMAGE_TAG
+  only:
+    refs:
+      - main
+
+update-helm-chart-image-tag:
+  stage: update image tag in helm chart
+  before_script:
+    - git version
+    - git config --global user.email "$GITLAB_USER_EMAIL"
+    - git config --global user.name "$GITLAB_USER_NAME"
+  script:
+    - git clone "https://$GITLAB_USER_LOGIN:$GITLAB_REGISTRY_TOKEN@gitlab.com/etutor1/helm-charts.git"
+    - cd helm-charts
+    - sed -i "s/tag:.*/tag:\ \"$CI_COMMIT_SHORT_SHA\"/" "src/charts/$CI_PROJECT_NAME/values.yaml"
+    - git commit -am "updated image tag for $CI_PROJECT_NAME to $CI_COMMIT_SHORT_SHA"
+    - git push

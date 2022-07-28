@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 6px 12px;
+  border-radius: 12px;
+  gap: 4px;
+}
